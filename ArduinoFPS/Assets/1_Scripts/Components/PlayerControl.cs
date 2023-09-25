@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     private float xRotate = 0.0f; // 내부 사용할 X축 회전량은 별도 정의 ( 카메라 위 아래 방향 )
 
     private Quaternion baseRotation = new Quaternion(0, 0, 1, 0);
+    public Vector3 quaternion;
     void Start()
     {
         StartCoroutine(InitializeGyro());
@@ -25,7 +26,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        transform.localRotation = GyroManager.Instance.GetGyroRotation() * baseRotation;
+        transform.localRotation = Quaternion.Euler(quaternion) * (GyroManager.Instance.GetGyroRotation() * baseRotation);
         //MouseRotation();
     }
 
