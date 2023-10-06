@@ -5,17 +5,28 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 8f;
-    public Transform cachedTransform;
+
+    Transform cachedTransform;
+    bool isCollisioin;
 
     void Start()
     {
         cachedTransform = this.transform;
-
-
     }
-    
+
+    public void OnEnable()
+    {
+        isCollisioin = false;
+    }
+
     void Update()
     {
-        cachedTransform.position += transform.forward * speed * Time.deltaTime;
+        if (!isCollisioin)
+            cachedTransform.position += transform.forward * speed * Time.deltaTime;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        isCollisioin = true;
     }
 }
