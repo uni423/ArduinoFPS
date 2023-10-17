@@ -47,7 +47,7 @@ public class GyroManager : MonoBehaviour
         if (gyroActive)
         {
             rotation = gyro.attitude;
-            Debug.Log(rotation);
+            //Debug.Log(rotation);
         }
     }
     public Quaternion GetGyroRotation()

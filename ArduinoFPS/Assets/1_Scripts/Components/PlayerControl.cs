@@ -33,12 +33,26 @@ public class PlayerControl : MonoBehaviour
 #endif
 
         //АјАн
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Home))
         {
             Debug.Log("Fire");
             GameObject bullet = GameManager.ObjectPooling.Spawn("Bullet");
             bullet.transform.SetPositionAndRotation(bulletPoint.position, bulletPoint.rotation);
         }
+        else if (Input.touchCount >= 1)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                Debug.Log("Fire");
+                GameObject bullet = GameManager.ObjectPooling.Spawn("Bullet");
+                bullet.transform.SetPositionAndRotation(bulletPoint.position, bulletPoint.rotation);
+                
+            }
+        }
+
+        if (Input.anyKeyDown)
+            Debug.Log(Input.inputString);
     }
 
     void MouseRotation()
