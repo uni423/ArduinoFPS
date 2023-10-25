@@ -5,14 +5,34 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public InGameManager inGameManager;
 
-    public static ObjectPooling ObjectPooling { get; private set; }
-
+    public GameStep gameStep;
 
     protected void Awake()
     {
         Instance = this;
 
-        ObjectPooling = FindObjectOfType<ObjectPooling>();
+        StartCoroutineMethod(TableBase.LoadAllDataTable());
+
+        //추후 씬을 나눌 경우 해당 Init을 Awake로 변경.
+        inGameManager.Init();
     }
+
+    #region Coroutine
+    public static Coroutine StartCoroutineMethod(IEnumerator enumerator)
+    {
+        return Instance.StartCoroutine(enumerator);
+    }
+
+    public static void StopCoroutineMethod(string name)
+    {
+        Instance.StopCoroutine(name);
+    }
+
+    public static void StopAllCoroutineMethod()
+    {
+        Instance.StopAllCoroutines();
+    }
+    #endregion
 }
