@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class RabbitMoveHandle : StateHandle
 {
+    Transform cachedTransofrm;
     /// <summary>
     /// 
     /// </summary>
     public override void OnEnter()
     {
-
+        cachedTransofrm = parent.unitObject.transform;
     }
 
     /// <summary>
@@ -16,7 +17,7 @@ public class RabbitMoveHandle : StateHandle
     /// <param name="delta"></param>
     public override void OnUpdate(float delta)
     {
-
+        cachedTransofrm.position += cachedTransofrm.forward * 0.3f;
     }
 
     /// <summary>

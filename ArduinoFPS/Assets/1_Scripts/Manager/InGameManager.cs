@@ -1,3 +1,4 @@
+using Microsoft.Win32;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class InGameManager : MonoBehaviour
     public static bool IsReSetting;
 
     private float time;
+
+    public PlayerControl playerControl;
 
     //protected void Awake()
     public void Init()
@@ -54,8 +57,24 @@ public class InGameManager : MonoBehaviour
             RabbitUnit rabbit = new RabbitUnit();
             rabbit.SetUnitTable(201);
             rabbit.Initialize();
-            rabbit.unitObject.cachedTransform.position = new Vector3(56.47726f, 1, -49.3681f);
+
+            Vector3 getPoint = Random.onUnitSphere;
+            getPoint.y = 0.0f;
+
+            float radius = 10f;
+            float r = Random.Range(0.0f, radius);
+            rabbit.unitObject.cachedTransform.position = (getPoint * r) + playerControl.transform.position;
+
+            rabbit.unitObject.cachedTransform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
+
+            unitManager.Regist(rabbit);
         }
+
+        unitManager.OnUpdate(Time.deltaTime);
     }
 
+    private void LateUpdate()
+    {
+        unitManager.OnLateUpdate(Time.deltaTime);
+    }
 }

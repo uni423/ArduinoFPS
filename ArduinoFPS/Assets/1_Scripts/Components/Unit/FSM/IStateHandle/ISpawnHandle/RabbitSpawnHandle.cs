@@ -8,7 +8,9 @@ public class RabbitSpawnHandle : StateHandle
     public override void OnEnter()
     {
 
+        Debug.LogError("Åä³¢ ½ºÆù");
     }
+    float time = 0;
 
     /// <summary>
     /// 
@@ -16,7 +18,9 @@ public class RabbitSpawnHandle : StateHandle
     /// <param name="delta"></param>
     public override void OnUpdate(float delta)
     {
-
+        time += delta;
+        if (time >= 1f)
+            parent.ChangeFSMState(StateMachine.State.Move);
     }
 
     /// <summary>

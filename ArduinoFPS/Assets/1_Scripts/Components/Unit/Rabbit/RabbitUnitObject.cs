@@ -8,8 +8,8 @@ public class RabbitUnitObject : UnitObject
 
     public override void LoadModel(string path)
     {
-        animator = model.GetComponent<Animator>();
-        mesh = model.GetComponentInChildren<SkinnedMeshRenderer>();
+        //animator = model.GetComponent<Animator>();
+        //mesh = model.GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     public override void SetAgent(Unit _unit)

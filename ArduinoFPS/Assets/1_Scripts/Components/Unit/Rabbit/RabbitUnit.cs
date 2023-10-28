@@ -28,6 +28,7 @@ public class RabbitUnit : Unit
         stateMachine.Regist(StateMachine.State.DeSpawn, new StateDeSpawn(this));
 
         SetStat();
+        RegistHandler();
     }
 
     public override void RegistHandler()
