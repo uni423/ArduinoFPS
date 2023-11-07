@@ -3,6 +3,11 @@ using UnityEngine;
 public class RabbitMoveHandle : StateHandle
 {
     Transform cachedTransofrm;
+
+    float curTime = 0f;
+    float maxTime = 10f;
+
+
     /// <summary>
     /// 
     /// </summary>
@@ -17,7 +22,11 @@ public class RabbitMoveHandle : StateHandle
     /// <param name="delta"></param>
     public override void OnUpdate(float delta)
     {
-        cachedTransofrm.position += cachedTransofrm.forward * 0.3f;
+        cachedTransofrm.position += cachedTransofrm.forward * delta * 5f;
+
+        curTime += delta; 
+        if (curTime >= maxTime)
+            parent.ChangeFSMState(StateMachine.State.DeSpawn);
     }
 
     /// <summary>
