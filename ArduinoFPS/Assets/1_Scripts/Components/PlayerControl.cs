@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    #region [Value]
+    #region [총]
     public Transform bulletPoint;
 
+    public int bulletCountMax;
+    public int bulletCountCur;
+    #endregion
+    #region [이동]
     public float turnSpeed = 4.0f; // 마우스 회전 속도
 
     private float xRotate = 0.0f; // 내부 사용할 X축 회전량은 별도 정의 ( 카메라 위 아래 방향 )
 
     private Quaternion baseRotation = new Quaternion(0, 0, 1, 0);
     public Vector3 quaternion;
+    #endregion
+    #endregion
+
     void Start()
     {
         StartCoroutine(InitializeGyro());
-    }
 
-    IEnumerator InitializeGyro()
-    {
-        yield return new WaitForSeconds(1f);
-        GyroManager.Instance.EnableGyro();
+        bulletCountMax = 5;
+        bulletCountCur = bulletCountMax;
     }
 
     void Update()
@@ -64,4 +70,12 @@ public class PlayerControl : MonoBehaviour
         //transform.Rotate(Input.gyro.rotationRateUnbiased.x, Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
         //Debug.Log(Input.gyro.attitude); // attitude has data now
     }
+
+    #region [Coroutine]
+    IEnumerator InitializeGyro()
+    {
+        yield return new WaitForSeconds(1f);
+        GyroManager.Instance.EnableGyro();
+    }
+    #endregion
 }

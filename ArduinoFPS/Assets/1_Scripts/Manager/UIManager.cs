@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void OnRefreshUI();
 public class UIManager : MonoBehaviour
 {
     private static UIManager m_instance;
@@ -17,6 +18,9 @@ public class UIManager : MonoBehaviour
             return m_instance;
         }
     }
+
+    public event OnRefreshUI onRefreshUserInfoUI;
+
 
     public void Init()
     {

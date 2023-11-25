@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public BluetoothManager bluetoothManager;
     public InGameManager inGameManager;
 
     public GameStep gameStep;
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         StartCoroutineMethod(TableBase.LoadAllDataTable());
+
+        //bluetoothManager.Init();
 
         //추후 씬을 나눌 경우 해당 Init을 Awake로 변경.
         inGameManager.Init();
