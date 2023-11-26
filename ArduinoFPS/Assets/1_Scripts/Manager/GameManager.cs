@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public BluetoothManager bluetoothManager;
     public InGameManager inGameManager;
 
+    public UserInfoData UserInfoData;
+
     public GameStep gameStep;
 
     protected void Awake()
@@ -19,7 +21,15 @@ public class GameManager : MonoBehaviour
         //bluetoothManager.Init();
 
         //추후 씬을 나눌 경우 해당 Init을 Awake로 변경.
-        inGameManager.Init();
+        //inGameManager.Init();
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        UserInfoData = new UserInfoData();
+        UserInfoData.InitData();
+        UserInfoData.SaveData();
     }
 
     #region Coroutine
