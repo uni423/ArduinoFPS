@@ -7,11 +7,6 @@ public class InGameManager : MonoBehaviour
 {
     public static InGameManager Instance;
 
-    public float score = 0;
-    public GameObject[] mapObjArr;
-
-    public PlayerControl playerControl;
-
     public UnitManager unitManager { private set; get; }
 
     public static ObjectPooling ObjectPooling { get; private set; }
@@ -22,9 +17,10 @@ public class InGameManager : MonoBehaviour
 
     private float time;
 
+    public PlayerControl playerControl;
 
-    //public void Init()
-    protected void Awake()
+    //protected void Awake()
+    public void Init()
     {
         Instance = this;
 
@@ -38,9 +34,6 @@ public class InGameManager : MonoBehaviour
         unitManager.Initialize();
 
         UIManager.Instance.Init();
-
-        for (int i = 0; i < mapObjArr.Length; i++)
-            mapObjArr[i].SetActive(i == GameManager.Instance.UserInfoData.selectedStage);
 
         DoGameStart();
     }
