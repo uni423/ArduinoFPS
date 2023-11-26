@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public BluetoothManager bluetoothManager;
     public InGameManager inGameManager;
+
+    public UserInfoData UserInfoData;
 
     public GameStep gameStep;
 
@@ -15,8 +18,18 @@ public class GameManager : MonoBehaviour
 
         StartCoroutineMethod(TableBase.LoadAllDataTable());
 
+        //bluetoothManager.Init();
+
         //추후 씬을 나눌 경우 해당 Init을 Awake로 변경.
-        inGameManager.Init();
+        //inGameManager.Init();
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        UserInfoData = new UserInfoData();
+        UserInfoData.InitData();
+        UserInfoData.SaveData();
     }
 
     #region Coroutine

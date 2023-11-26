@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void OnRefreshUI();
+public enum UIState
+{
+    _InGameUI,
+}
 public class UIManager : MonoBehaviour
 {
     private static UIManager m_instance;
@@ -17,9 +22,24 @@ public class UIManager : MonoBehaviour
             return m_instance;
         }
     }
+    public UIState curState { private set; get; }
+    public List<UIBase> uiDataLists;
+
+    public event OnRefreshUI onRefreshUserInfoUI;
+
 
     public void Init()
     {
+        for (int i = 0; i < uiDataLists.Count; i++)
+        {
+            if (uiDataLists[i] != null)
+                uiDataLists[i].Init();
+        }
+    }
 
+
+    public void RefreshUserInfo()
+    {
+        onRefreshUserInfoUI?.Invoke();
     }
 }
