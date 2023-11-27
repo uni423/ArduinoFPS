@@ -6,6 +6,7 @@ public delegate void OnRefreshUI();
 public enum UIState
 {
     _InGameUI,
+    _ResultUI, 
 }
 public class UIManager : MonoBehaviour
 {
@@ -37,9 +38,23 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
     public void RefreshUserInfo()
     {
         onRefreshUserInfoUI?.Invoke();
+    }
+
+    public void ShowUI(UIState state)
+    {
+        curState = state;
+
+        if (uiDataLists.Count >= (int)state && uiDataLists[(int)state] != null)
+        {
+            uiDataLists[(int)state].ShowUI();
+        }
+    }
+    public void HideUI(UIState state)
+    {
+        if (uiDataLists.Count >= (int)state && uiDataLists[(int)state] != null)
+            uiDataLists[(int)state].HideUI();
     }
 }

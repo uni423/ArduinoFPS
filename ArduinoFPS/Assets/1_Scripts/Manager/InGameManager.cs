@@ -21,6 +21,7 @@ public class InGameManager : MonoBehaviour
     public static bool IsReSetting;
 
     private float time;
+    public float gameTime;
 
 
     //public void Init()
@@ -43,6 +44,8 @@ public class InGameManager : MonoBehaviour
             mapObjArr[i].SetActive(i == GameManager.Instance.UserInfoData.selectedStage);
 
         DoGameStart();
+
+        gameTime = 60;
     }
 
     public static void DoGameStart()
@@ -56,7 +59,20 @@ public class InGameManager : MonoBehaviour
 
     private void Update()
     {
+        if (IsPlaying == false)
+            return;
+
         time += Time.deltaTime;
+        gameTime -= Time.deltaTime;
+
+        if (gameTime <= 0)
+        {
+            IsPlaying = false;
+            UIManager.Instance.HideUI(UIState._InGameUI);
+            UIManager.Instance.ShowUI(UIState._ResultUI);
+            return;
+        }
+
         if (time >= 5f)
         {
             time -= 5f;
@@ -83,5 +99,11 @@ public class InGameManager : MonoBehaviour
     private void LateUpdate()
     {
         unitManager.OnLateUpdate(Time.deltaTime);
+    }
+
+    public void AddScore(int addScore )
+    {
+        score += addScore;
+        UIManager.Instance.RefreshUserInfo();
     }
 }

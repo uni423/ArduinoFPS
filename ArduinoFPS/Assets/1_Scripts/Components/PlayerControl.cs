@@ -31,6 +31,9 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+        if (InGameManager.IsPlaying == false)
+            return;
+
         //¿Ãµø
 #if UNITY_EDITOR
         MouseRotation();
@@ -56,6 +59,35 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
             OnReload();
+    }
+
+    private bool isTrigger;
+    private bool isReload;
+    public void Buletooth(string command)
+    {
+        switch (command)
+        {
+            case "trigger On":
+                if (!isTrigger)
+                {
+                    isTrigger = true;
+                    OnFire();
+                }
+                break;
+            case "trigger Off":
+                isTrigger = false;
+                break;
+            case "Reload PUSH & Reload":
+                if (!isTrigger)
+                {
+                    isTrigger = true;
+                    OnReload();
+                }
+                break;
+            case "Reload PULL":
+                isTrigger = false;
+                break;
+        }
     }
 
     public void OnFire()

@@ -11,3 +11,9 @@ public enum GameStep
 {
     Loading, Menu, Playing, End, Continue, Pause,
 }
+
+public enum AttackType
+{
+    Normal, 
+
+}

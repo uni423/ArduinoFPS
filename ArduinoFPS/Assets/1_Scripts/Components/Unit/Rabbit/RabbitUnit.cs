@@ -40,4 +40,28 @@ public class RabbitUnit : Unit
         SetHandle(StateMachine.State.DeSpawn, StateHandleFactory.Create<RabbitDeSpawnHandle>());
     }
 
+
+    public void Hit(AttackType type)
+    {
+        if (IsDeath == true)
+            return;
+
+        switch (type)
+        {
+            case AttackType.Normal:
+                hp -= 10;
+                //ChangeFSMState(StateMachine.State.Hit);
+                CheckDead();
+                break;
+        }
+    }
+
+    public void CheckDead()
+    {
+        if (hp > 0 || IsDeath == true)
+            return;
+
+        ChangeFSMState(StateMachine.State.Death);
+    }
+
 }

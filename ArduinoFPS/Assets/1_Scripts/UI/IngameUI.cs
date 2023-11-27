@@ -10,6 +10,7 @@ public class IngameUI : UIBase
     public Color bulletOnColor;
     public Color bulletOffColor;
     public Text scoreText;
+    public Text timeText;
 
     public override void Init()
     {
@@ -32,5 +33,10 @@ public class IngameUI : UIBase
         {
             bulletImage[i].color = (i < InGameManager.Instance.playerControl.bulletCountCur) ? bulletOnColor : bulletOffColor;
         }
+    }
+
+    public void Update()
+    {
+        timeText.text = string.Concat(InGameManager.Instance.gameTime.ToString("N0"), "s");
     }
 }
