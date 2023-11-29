@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,5 +57,9 @@ public class UIManager : MonoBehaviour
     {
         if (uiDataLists.Count >= (int)state && uiDataLists[(int)state] != null)
             uiDataLists[(int)state].HideUI();
+    }
+    public UIBase GetUI(UIState state)
+    {
+        return uiDataLists[(int)state];
     }
 }

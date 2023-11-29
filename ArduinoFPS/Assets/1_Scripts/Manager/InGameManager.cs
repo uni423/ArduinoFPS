@@ -21,6 +21,7 @@ public class InGameManager : MonoBehaviour
     public static bool IsReSetting;
 
     private float time;
+    private float rabbitSapwnTime = 3f;
     public float gameTime;
 
 
@@ -73,9 +74,9 @@ public class InGameManager : MonoBehaviour
             return;
         }
 
-        if (time >= 5f)
+        if (time >= rabbitSapwnTime)
         {
-            time -= 5f;
+            time -= rabbitSapwnTime;
 
             RabbitUnit rabbit = new RabbitUnit();
             rabbit.SetUnitTable(201);
@@ -101,9 +102,10 @@ public class InGameManager : MonoBehaviour
         unitManager.OnLateUpdate(Time.deltaTime);
     }
 
-    public void AddScore(int addScore )
+    public void AddScore(int addScore, bool isCombo = false)
     {
         score += addScore;
         UIManager.Instance.RefreshUserInfo();
+        (UIManager.Instance.GetUI(UIState._InGameUI) as IngameUI).AddScoreUI(addScore, isCombo);
     }
 }

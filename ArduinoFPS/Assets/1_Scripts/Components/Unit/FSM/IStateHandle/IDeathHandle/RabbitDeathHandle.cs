@@ -26,6 +26,7 @@ public class RabbitDeathHandle : StateHandle
         {
             InGameManager.ObjectPooling.Despawn(parent.unitObject.gameObject);
             InGameManager.Instance.AddScore(parent.unitData.point);
+            InGameManager.Instance.playerControl.SetCombo();
         }
     }
 

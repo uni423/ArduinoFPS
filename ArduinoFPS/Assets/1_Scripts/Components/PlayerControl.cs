@@ -10,6 +10,9 @@ public class PlayerControl : MonoBehaviour
 
     public int bulletCountMax;
     public int bulletCountCur;
+    public int comboCount;
+    public float comboTimeMax;
+    public float comboTimeCur;
     #endregion
     #region [이동]
     public float turnSpeed = 4.0f; // 마우스 회전 속도
@@ -26,6 +29,9 @@ public class PlayerControl : MonoBehaviour
         StartCoroutine(InitializeGyro());
 
         bulletCountMax = 5;
+        comboCount = 0;
+        comboTimeMax = 5f;
+        comboTimeCur = 0f;
         OnReload();
     }
 
@@ -59,12 +65,25 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
             OnReload();
+
+        //콤보
+        if (comboCount > 0)
+        {
+            comboTimeCur += Time.deltaTime;
+            if (comboTimeCur >= comboTimeMax)
+            {
+                //콤보 종료
+                comboCount = 0;
+                comboTimeCur = 0f;
+            }
+        }
     }
 
     private bool isTrigger;
     private bool isReload;
     public void Buletooth(string command)
     {
+        Debug.Log("Buletooth" + command);
         switch (command)
         {
             case "trigger On":
@@ -110,7 +129,6 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-
     void MouseRotation()
     {
         float yRotateSize = Input.GetAxis("Mouse X") * turnSpeed;
@@ -122,6 +140,14 @@ public class PlayerControl : MonoBehaviour
         transform.eulerAngles = new Vector3(xRotate, yRotate, 0);
         //transform.Rotate(Input.gyro.rotationRateUnbiased.x, Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
         //Debug.Log(Input.gyro.attitude); // attitude has data now
+    }
+
+    public void SetCombo()
+    {
+        comboCount++;
+        comboTimeCur = 0f;
+        if (comboCount > 1)
+            InGameManager.Instance.AddScore(comboCount, true);
     }
 
     #region [Coroutine]

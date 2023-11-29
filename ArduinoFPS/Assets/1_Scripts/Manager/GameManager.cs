@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         Instance = this;
+        DontDestroyOnLoad(this.gameObject);
 
         StartCoroutineMethod(TableBase.LoadAllDataTable());
 

@@ -10,6 +10,7 @@ public class IngameUI : UIBase
     public Color bulletOnColor;
     public Color bulletOffColor;
     public Text scoreText;
+    public Transform scoreStackParent;
     public Text timeText;
 
     public override void Init()
@@ -33,6 +34,15 @@ public class IngameUI : UIBase
         {
             bulletImage[i].color = (i < InGameManager.Instance.playerControl.bulletCountCur) ? bulletOnColor : bulletOffColor;
         }
+    }
+
+    public void AddScoreUI(float point, bool isCombo)
+    {
+        Text scoreText = InGameManager.ObjectPooling.Spawn<Text>("Add Score Text");
+        if (!isCombo)
+            scoreText.text = string.Concat("+", point);
+        else scoreText.text = string.Concat("Combo! +", point);
+        scoreText.transform.SetParent(scoreStackParent);
     }
 
     public void Update()

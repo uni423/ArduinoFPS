@@ -21,7 +21,7 @@ public class BluetoothManager : MonoBehaviour
             || !Permission.HasUserAuthorizedPermission("android.permission.BLUETOOTH_SCAN")
             || !Permission.HasUserAuthorizedPermission("android.permission.BLUETOOTH_ADVERTISE")
             || !Permission.HasUserAuthorizedPermission("android.permission.BLUETOOTH_CONNECT"))
-                Permission.RequestUserPermissions(new string[] {
+            Permission.RequestUserPermissions(new string[] {
                         Permission.CoarseLocation,
                             Permission.FineLocation,
                             "android.permission.BLUETOOTH_SCAN",
@@ -51,13 +51,15 @@ public class BluetoothManager : MonoBehaviour
                     dataRecived = datain;
                     //print(dataRecived);
                     Debug.LogError(dataRecived);
-                    InGameManager.Instance.playerControl.Buletooth(dataRecived);
+                    if (InGameManager.Instance != null)
+                        InGameManager.Instance.playerControl.Buletooth(dataRecived);
                 }
 
             }
             catch (Exception e)
             {
                 BluetoothService.Toast("Error in connection");
+                Debug.LogError(e.Message);
             }
         }
     }
