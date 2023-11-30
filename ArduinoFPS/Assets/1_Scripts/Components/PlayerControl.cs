@@ -97,14 +97,14 @@ public class PlayerControl : MonoBehaviour
                 isTrigger = false;
                 break;
             case "Reload PUSH & Reload":
-                if (!isTrigger)
+                if (!isReload)
                 {
-                    isTrigger = true;
+                    isReload = true;
                     OnReload();
                 }
                 break;
             case "Reload PULL":
-                isTrigger = false;
+                isReload = false;
                 break;
         }
     }
