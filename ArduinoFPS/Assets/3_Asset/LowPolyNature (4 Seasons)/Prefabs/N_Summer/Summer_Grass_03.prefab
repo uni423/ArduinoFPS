@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 1979113964346161875}
   - component: {fileID: 7852412508655354688}
   - component: {fileID: 1623345695007878882}
-  - component: {fileID: 3517154844870994951}
   m_Layer: 0
   m_Name: Summer_Grass_03_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3517154844870994951
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5147651070845055449}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.41742623, y: 0.4367159, z: 0.41667908}
-  m_Center: {x: 0.0063502863, y: 0.19884765, z: -0.04345251}

@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 2644770466606012173}
   - component: {fileID: 6976288436474196902}
   - component: {fileID: 2816057659545774693}
-  - component: {fileID: 1534588299357584280}
   m_Layer: 0
   m_Name: Winter_Mushroom_01_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1534588299357584280
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6019025163069627184}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.17246738, y: 0.2686454, z: 0.17246738}
-  m_Center: {x: -0.0000000037252903, y: 0.12794065, z: 0.000000040978193}

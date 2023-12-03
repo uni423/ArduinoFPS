@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 734933211943205750}
   - component: {fileID: 2714106979613457152}
   - component: {fileID: 7618262435013295070}
-  - component: {fileID: 5142331160820339629}
   m_Layer: 0
   m_Name: Summer_Flower_08_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5142331160820339629
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9135092851135103253}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.31579474, y: 0.2937665, z: 0.23082688}
-  m_Center: {x: 0.0010017902, y: 0.12552324, z: -0.0064764954}

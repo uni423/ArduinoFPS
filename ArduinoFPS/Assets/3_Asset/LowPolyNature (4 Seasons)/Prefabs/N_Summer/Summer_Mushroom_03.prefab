@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 7904674187540685182}
   - component: {fileID: 5183266794504021523}
   - component: {fileID: 3456314311669166096}
-  - component: {fileID: 8078889536049312322}
   m_Layer: 0
   m_Name: Summer_Mushroom_03_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8078889536049312322
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9013081719742690212}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.37485534, y: 0.2998213, z: 0.2798928}
-  m_Center: {x: 0.033477396, y: 0.14257182, z: 0.03641776}

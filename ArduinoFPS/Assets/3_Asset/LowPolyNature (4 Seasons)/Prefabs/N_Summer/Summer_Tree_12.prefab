@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 3027017400729417695}
   - component: {fileID: 8427504969234109033}
   - component: {fileID: 326725045013562591}
-  - component: {fileID: 4827820893841440144}
+  - component: {fileID: 4054665075373017221}
   m_Layer: 0
   m_Name: Summer_Tree_12_LOD0
   m_TagString: Untagged
@@ -138,8 +138,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4827820893841440144
-BoxCollider:
+--- !u!136 &4054665075373017221
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,9 +148,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 8.843562, z: 1.5}
-  m_Center: {x: 0, y: 4.2762103, z: 0}
+  m_Radius: 0.16
+  m_Height: 4.700338
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.1770384, z: 0}
 --- !u!1 &8579200632127503816
 GameObject:
   m_ObjectHideFlags: 0

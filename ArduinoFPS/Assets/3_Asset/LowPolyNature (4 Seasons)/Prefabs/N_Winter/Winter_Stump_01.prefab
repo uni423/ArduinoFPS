@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4250558884677144014}
   - component: {fileID: 2910888605172035253}
   - component: {fileID: 5030782897443854861}
-  - component: {fileID: 8160105440801671964}
+  - component: {fileID: 7096222322391133314}
   m_Layer: 0
   m_Name: Winter_Stump_01_LOD0
   m_TagString: Untagged
@@ -138,8 +138,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8160105440801671964
-BoxCollider:
+--- !u!136 &7096222322391133314
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,9 +148,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.72065055, y: 0.3904795, z: 0.6090276}
-  m_Center: {x: 0.0075286925, y: 0.17295685, z: -0.05578641}
+  m_Radius: 0.1529676
+  m_Height: 0.54070216
+  m_Direction: 1
+  m_Center: {x: 0.00066518784, y: 0.102043, z: 0}
 --- !u!1 &4088063839400926463
 GameObject:
   m_ObjectHideFlags: 0

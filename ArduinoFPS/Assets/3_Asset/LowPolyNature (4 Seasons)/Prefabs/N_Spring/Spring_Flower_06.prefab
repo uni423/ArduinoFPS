@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 3492727444688626928}
   - component: {fileID: 3079056977516958673}
   - component: {fileID: 6258131003102524835}
-  - component: {fileID: 443984882410327008}
   m_Layer: 0
   m_Name: Spring_Flower_06_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &443984882410327008
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8147206493135916066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.37412137, y: 0.28058472, z: 0.23969458}
-  m_Center: {x: -0.0019580498, y: 0.13176529, z: 0.011730574}

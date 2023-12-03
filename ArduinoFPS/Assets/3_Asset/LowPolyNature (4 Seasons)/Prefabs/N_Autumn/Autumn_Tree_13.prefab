@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4689429372200512855}
   - component: {fileID: 209509765385020422}
   - component: {fileID: 3882315389138909125}
-  - component: {fileID: 5738377592116008093}
+  - component: {fileID: 8541764628082266868}
   m_Layer: 0
   m_Name: Autumn_Tree_13_LOD0
   m_TagString: Untagged
@@ -219,8 +219,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5738377592116008093
-BoxCollider:
+--- !u!136 &8541764628082266868
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,6 +229,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 7.2228074, z: 1}
-  m_Center: {x: 0, y: 3.5495613, z: 0}
+  m_Radius: 0.12
+  m_Height: 4.700338
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.1770384, z: -0.15}

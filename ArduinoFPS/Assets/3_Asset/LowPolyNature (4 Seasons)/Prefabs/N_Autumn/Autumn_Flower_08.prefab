@@ -67,7 +67,6 @@ GameObject:
   - component: {fileID: 5941314118312467108}
   - component: {fileID: 567276436212779446}
   - component: {fileID: 7351424698820388250}
-  - component: {fileID: 68555279829726386}
   m_Layer: 0
   m_Name: Autumn_Flower_08_LOD0
   m_TagString: Untagged
@@ -138,19 +137,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &68555279829726386
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7473812860829049994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.31579474, y: 0.2937665, z: 0.23082688}
-  m_Center: {x: 0.0010017902, y: 0.12552324, z: -0.0064764954}
 --- !u!1 &7686814521409155229
 GameObject:
   m_ObjectHideFlags: 0

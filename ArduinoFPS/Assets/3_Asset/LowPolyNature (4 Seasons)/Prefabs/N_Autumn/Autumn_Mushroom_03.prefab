@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 1345876894893810356}
   - component: {fileID: 7431536880122359797}
   - component: {fileID: 6413521493765540644}
-  - component: {fileID: 4341618356400416787}
   m_Layer: 0
   m_Name: Autumn_Mushroom_03_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4341618356400416787
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9150167065875830732}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.37485534, y: 0.2998213, z: 0.2798928}
-  m_Center: {x: 0.033477396, y: 0.14257182, z: 0.03641776}

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9060559900070449966}
   - component: {fileID: 3882998025007707421}
   - component: {fileID: 917441560887151418}
-  - component: {fileID: 3304255454091522311}
   m_Layer: 0
   m_Name: Autumn_Grass_03_LOD0
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3304255454091522311
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409256418161605422}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.41742623, y: 0.4367159, z: 0.41667908}
-  m_Center: {x: 0.0063502863, y: 0.19884765, z: -0.04345251}
 --- !u!1 &2008793775372748628
 GameObject:
   m_ObjectHideFlags: 0

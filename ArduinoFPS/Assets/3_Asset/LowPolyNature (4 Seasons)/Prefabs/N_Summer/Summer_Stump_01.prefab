@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6983773240124784541}
   - component: {fileID: 6151672458000920120}
   - component: {fileID: 2174388002533595935}
-  - component: {fileID: 2569661192402334622}
+  - component: {fileID: 2852861534127437878}
   m_Layer: 0
   m_Name: Summer_Stump_01_LOD0
   m_TagString: Untagged
@@ -219,8 +219,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2569661192402334622
-BoxCollider:
+--- !u!136 &2852861534127437878
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,6 +229,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.72065055, y: 0.38347974, z: 0.6090276}
-  m_Center: {x: 0.0075286925, y: 0.16945697, z: -0.05578641}
+  m_Radius: 0.16
+  m_Height: 0.53044903
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.092094295, z: 0}

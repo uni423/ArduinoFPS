@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8745574917079010267}
   - component: {fileID: 4263125649158896825}
   - component: {fileID: 1919218578597639526}
-  - component: {fileID: 2581993876027123936}
   m_Layer: 0
   m_Name: Spring_Mushroom_01_LOD0
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2581993876027123936
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65311688352213332}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.17246738, y: 0.26328632, z: 0.17246738}
-  m_Center: {x: -0.0000000037252903, y: 0.12526111, z: 0.000000040978193}
 --- !u!1 &1570781591372221124
 GameObject:
   m_ObjectHideFlags: 0

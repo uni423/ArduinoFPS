@@ -67,7 +67,6 @@ GameObject:
   - component: {fileID: 6445156332583582697}
   - component: {fileID: 7511760482075107533}
   - component: {fileID: 8153787823563846088}
-  - component: {fileID: 1271085192151857047}
   m_Layer: 0
   m_Name: Autumn_Plant_02_LOD0
   m_TagString: Untagged
@@ -138,19 +137,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1271085192151857047
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5853546583161088946}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.87838995, y: 0.5517814, z: 0.81613576}
-  m_Center: {x: -0.027436659, y: 0.26482183, z: 0.0522566}
 --- !u!1 &7150081311657239715
 GameObject:
   m_ObjectHideFlags: 0

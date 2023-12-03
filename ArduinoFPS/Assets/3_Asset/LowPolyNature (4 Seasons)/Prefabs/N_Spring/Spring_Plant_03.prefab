@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 6206494232182416812}
   - component: {fileID: 8317501510151273474}
   - component: {fileID: 6959433727749631444}
-  - component: {fileID: 105084960531767283}
   m_Layer: 0
   m_Name: Spring_Plant_03_LOD0
   m_TagString: Untagged
@@ -219,16 +218,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &105084960531767283
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8670596923804341286}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.8178537, y: 1.4413509, z: 0.82940865}
-  m_Center: {x: -0.03383091, y: 0.6489984, z: -0.027535394}

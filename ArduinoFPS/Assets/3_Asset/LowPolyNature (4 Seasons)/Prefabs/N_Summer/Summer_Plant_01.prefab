@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 4836249564075938177}
   - component: {fileID: 1831884780336981092}
   - component: {fileID: 7611318989530223585}
-  - component: {fileID: 6747505107739644526}
   m_Layer: 0
   m_Name: Summer_Plant_01_LOD0
   m_TagString: Untagged
@@ -163,19 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6747505107739644526
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871745121136839426}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6896777, y: 0.8080752, z: 1.7137673}
-  m_Center: {x: 0.007814735, y: 0.39077723, z: 0.0077529848}
 --- !u!1 &2309628270400027985
 GameObject:
   m_ObjectHideFlags: 0

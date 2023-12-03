@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 1361362463382566102}
   - component: {fileID: 138423382964903090}
   - component: {fileID: 490629049433620980}
-  - component: {fileID: 8511746015359626857}
+  - component: {fileID: 8377586527231751241}
   m_Layer: 0
   m_Name: Winter_Tree_11_LOD0
   m_TagString: Untagged
@@ -138,8 +138,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8511746015359626857
-BoxCollider:
+--- !u!136 &8377586527231751241
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,9 +148,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 9.13378, z: 1.5}
-  m_Center: {x: 0, y: 4.4991503, z: 0}
+  m_Radius: 0.24049127
+  m_Height: 4.697359
+  m_Direction: 1
+  m_Center: {x: -0.1371293, y: 2.148797, z: 0.0017074347}
 --- !u!1 &6352132365016915646
 GameObject:
   m_ObjectHideFlags: 0

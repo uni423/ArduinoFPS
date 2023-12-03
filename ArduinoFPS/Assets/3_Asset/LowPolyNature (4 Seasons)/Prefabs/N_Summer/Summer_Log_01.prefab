@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4603890688498824555}
   - component: {fileID: 4469477584506594216}
   - component: {fileID: 1303890351396892592}
-  - component: {fileID: 217731015372007962}
+  - component: {fileID: 8077173383621715685}
   m_Layer: 0
   m_Name: Summer_Log_01_LOD0
   m_TagString: Untagged
@@ -219,8 +219,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &217731015372007962
-BoxCollider:
+--- !u!136 &8077173383621715685
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,6 +229,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6950529, y: 0.41439396, z: 0.38032162}
-  m_Center: {x: 0.006884247, y: 0.025545381, z: 0.01384718}
+  m_Radius: 0.16
+  m_Height: 1.7615919
+  m_Direction: 0
+  m_Center: {x: 0.051080942, y: 0, z: 0}
