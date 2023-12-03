@@ -67160,6 +67160,12 @@ MonoBehaviour:
     objectCount: 1
   - prefab: {fileID: 5710356742963989011, guid: ab73c149579019d4fb849df9c3664b7d, type: 3}
     objectCount: 1
+  - prefab: {fileID: 5710356742963989011, guid: 32d3da4eb27a9464585d955476dc28f9, type: 3}
+    objectCount: 1
+  - prefab: {fileID: 5710356742963989011, guid: ab4c4e96504e6644894e28fa2a6a8cca, type: 3}
+    objectCount: 1
+  - prefab: {fileID: 5710356742963989011, guid: 21f413591bf0c4c44bff537efada01f9, type: 3}
+    objectCount: 1
   - prefab: {fileID: 7004847412731397763, guid: 190fc7bb5b0781a44b9ac493ae22bcd8, type: 3}
     objectCount: 1
   - prefab: {fileID: 141433446842962269, guid: dd8a9727981ea7544b55a51f8d2bd6f9, type: 3}

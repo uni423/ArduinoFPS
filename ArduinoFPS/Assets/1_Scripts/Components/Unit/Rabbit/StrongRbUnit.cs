@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BabyRbUnit : RabbitUnit
+public class StrongRbUnit : RabbitUnit
 {
-    BabyRbUnitObject unitObject;
+    StrongRbUnitObject unitObject;
 
     public override void Initialize()
     {
         IsUpdate = true;
         IsDeath = false;
 
-        unitObject = InGameManager.ObjectPooling.Spawn<BabyRbUnitObject>(this.unitData.model);
+        unitObject = InGameManager.ObjectPooling.Spawn<StrongRbUnitObject>(this.unitData.model);
         //unitObject.model.transform.localPosition = Vector3.zero;
         //unitObject.model.transform.localRotation = Quaternion.identity;
         base.unitObject = unitObject;

@@ -7,6 +7,7 @@ public class RabbitDeSpawnHandle : StateHandle
     /// </summary>
     public override void OnEnter()
     {
+        InGameManager.ObjectPooling.Despawn(parent.unitObject.gameObject);
     }
 
     /// <summary>

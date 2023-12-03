@@ -41,8 +41,7 @@ public class RabbitUnit : Unit
         SetHandle(StateMachine.State.DeSpawn, StateHandleFactory.Create<RabbitDeSpawnHandle>());
     }
 
-
-    public void Hit(AttackType type)
+    public virtual void Hit(AttackType type)
     {
         if (IsDeath == true)
             return;

@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BabyRbUnit : RabbitUnit
+public class EvolveRbUnit : RabbitUnit
 {
-    BabyRbUnitObject unitObject;
+    EvolveRbUnitObject unitObject;
 
     public override void Initialize()
     {
         IsUpdate = true;
         IsDeath = false;
 
-        unitObject = InGameManager.ObjectPooling.Spawn<BabyRbUnitObject>(this.unitData.model);
+        unitObject = InGameManager.ObjectPooling.Spawn<EvolveRbUnitObject>(this.unitData.model);
         //unitObject.model.transform.localPosition = Vector3.zero;
         //unitObject.model.transform.localRotation = Quaternion.identity;
         base.unitObject = unitObject;
@@ -50,5 +50,14 @@ public class BabyRbUnit : RabbitUnit
                 CheckDead();
                 break;
         }
+    }
+
+    public override void RegistHandler()
+    {
+        SetHandle(StateMachine.State.Spawn, StateHandleFactory.Create<RabbitSpawnHandle>());
+        SetHandle(StateMachine.State.Move, StateHandleFactory.Create<EvolveRbMoveHandle>());
+        SetHandle(StateMachine.State.Hit, StateHandleFactory.Create<RabbitHitHandle>());
+        SetHandle(StateMachine.State.Death, StateHandleFactory.Create<EvolveRbDeathHandle>());
+        SetHandle(StateMachine.State.DeSpawn, StateHandleFactory.Create<RabbitDeSpawnHandle>());
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RabbitMoveHandle : StateHandle
+public class StrongRbMoveHandle : StateHandle
 {
     Transform cachedTransofrm;
     int speed;
@@ -18,11 +18,7 @@ public class RabbitMoveHandle : StateHandle
         speed = parent.unitData.move;
 
         parent.SetAnimationParam("IsMove", true);
-        int special = Random.Range(0, 20);
-        if (special == 0)
-            parent.SetAnimationParam("MoveType", 1);
-        else if (special == 1)
-            parent.SetAnimationParam("MoveType", 2);
+        parent.SetAnimationParam("MoveType", 4);
     }
 
     /// <summary>
@@ -33,7 +29,7 @@ public class RabbitMoveHandle : StateHandle
     {
         cachedTransofrm.position += cachedTransofrm.forward * delta * speed;
 
-        curTime += delta; 
+        curTime += delta;
         if (curTime >= maxTime)
             parent.ChangeFSMState(StateMachine.State.DeSpawn);
     }

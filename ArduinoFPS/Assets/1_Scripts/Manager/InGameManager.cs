@@ -95,8 +95,7 @@ public class InGameManager : MonoBehaviour
             
             switch (GameManager.Instance.UserInfoData.selectedStage)
             {
-                //case 1: randomInt = Random.Range(0, 2); break;
-                case 1: randomInt = 1; break;
+                case 1: randomInt = Random.Range(0, 2); break;
                 case 2: randomInt = Random.Range(0, 3); break;
                 case 3: randomInt = Random.Range(0, 5); break;
                 default: randomInt = 0; break;
@@ -120,12 +119,13 @@ public class InGameManager : MonoBehaviour
                     rabbit.SetUnitTable(201);
                     break;
                 case Unit_Type.Rabbit_Evolve:
-                    rabbit = new RabbitUnit();
-                    rabbit.SetUnitTable(201);
+                    rabbit = new EvolveRbUnit();
+                    rabbit.SetUnitTable(204);
+                    getPoint.y = 1f;
                     break;
                 case Unit_Type.Rabbit_BulkUp:
-                    rabbit = new RabbitUnit();
-                    rabbit.SetUnitTable(201);
+                    rabbit = new BulkUpRbUnit();
+                    rabbit.SetUnitTable(205);
                     break;
             }
             rabbit.Initialize();
