@@ -119,8 +119,12 @@ public class PlayerControl : MonoBehaviour
     {
         if (bulletCountCur > 0)
         {
+            //Sound
             audioSource.clip = fireSFX[Random.Range(0, fireSFX.Length)];
             audioSource.Play();
+            //Effect
+            InGameManager.ObjectPooling.Spawn("Player_Fire", null, bulletPoint.position);
+
             bulletCountCur--;
             GameObject bullet = InGameManager.ObjectPooling.Spawn("Bullet");
             bullet.transform.SetPositionAndRotation(bulletPoint.position, bulletPoint.rotation);

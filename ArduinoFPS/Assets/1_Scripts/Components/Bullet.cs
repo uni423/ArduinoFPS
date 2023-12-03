@@ -92,12 +92,13 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isCollisioin = true;
         time = 0f;
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && !isCollisioin)
         {
             RabbitUnit rabbitUnit = (RabbitUnit)collision.transform.GetComponent<RabbitUnitObject>().unit;
             rabbitUnit.Hit(AttackType.Normal);
         }
+        
+        isCollisioin = true;
     }
 }

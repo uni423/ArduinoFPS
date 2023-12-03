@@ -13108,13 +13108,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387275482}
-  m_LocalRotation: {x: 0.012047823, y: 0.036683436, z: -0.99924904, w: 0.0032495256}
-  m_LocalPosition: {x: -0.029, y: -0.244, z: 1.348}
+  m_LocalRotation: {x: 0, y: 0.0436195, z: -0.99904823, w: 0}
+  m_LocalPosition: {x: 0, y: -0.244, z: 1.349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 901814711}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 175.791, y: 178.63, z: 0.32200623}
+  m_LocalEulerAnglesHint: {x: 175, y: 180, z: 0}
 --- !u!1001 &388068197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67159,6 +67159,12 @@ MonoBehaviour:
   - prefab: {fileID: 5710356742963989011, guid: fdea7568c22494e4fba9bdde54468894, type: 3}
     objectCount: 1
   - prefab: {fileID: 7004847412731397763, guid: 190fc7bb5b0781a44b9ac493ae22bcd8, type: 3}
+    objectCount: 1
+  - prefab: {fileID: 141433446842962269, guid: dd8a9727981ea7544b55a51f8d2bd6f9, type: 3}
+    objectCount: 1
+  - prefab: {fileID: 4021103657954561961, guid: 981a755bd1f9e014b8aaa235eec1bd75, type: 3}
+    objectCount: 1
+  - prefab: {fileID: 9157105887711914197, guid: b511997ed9faab349a773aa901e2cc20, type: 3}
     objectCount: 1
 --- !u!4 &1997340290
 Transform:

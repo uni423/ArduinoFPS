@@ -49,6 +49,11 @@ public class RabbitUnit : Unit
         switch (type)
         {
             case AttackType.Normal:
+
+                //Sound
+                //Effect
+                InGameManager.ObjectPooling.Spawn("Rabbit_Hit", null, unitObject.cachedTransform.position);
+
                 hp -= 10;
                 //ChangeFSMState(StateMachine.State.Hit);
                 CheckDead();
