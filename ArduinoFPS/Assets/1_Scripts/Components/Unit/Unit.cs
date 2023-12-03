@@ -97,10 +97,22 @@ public partial class Unit : Entity
         return stateMachine.GetFSMState();
     }
 
+    public void SetAnimationParam(string param)
+    {        
+        int hash = Animator.StringToHash(param);
+        unitObject.animator.SetTrigger(hash);
+    }
+
     public void SetAnimationParam(string param, bool _isValid)
     {        
         int hash = Animator.StringToHash(param);
         unitObject.animator.SetBool(hash, _isValid);
+    }
+
+    public void SetAnimationParam(string param, int _isValid)
+    {        
+        int hash = Animator.StringToHash(param);
+        unitObject.animator.SetInteger(hash, _isValid);
     }
 
     public bool IsPlaingAnimation(string param)

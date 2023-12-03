@@ -9,7 +9,7 @@ public class StateSpawn : StateBase
 
     public override void Enter()
     {
-        parent.SetAnimationParam("IsSpawn", true);
+        parent.SetAnimationParam("IsSpawn");
         if (handle != null)
             handle.OnEnter();
     }
@@ -21,7 +21,6 @@ public class StateSpawn : StateBase
             if (parent.unitObject.animator.GetCurrentAnimatorStateInfo(0).IsName(AnimationName) &&
                 parent.unitObject.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
             {
-                parent.SetAnimationParam("IsSpawn", false);
                 parent.ChangeFSMState(StateMachine.State.Move);
             }
         }

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5710356741020704726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.999996, y: 39.999996, z: 39.999996}
+  m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children: []
   m_Father: {fileID: 5710356742963989006}
   m_RootOrder: 3
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 5710356741077605717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.999996, y: 39.999996, z: 39.999996}
+  m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children: []
   m_Father: {fileID: 5710356742963989006}
   m_RootOrder: 2
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 5710356741271024287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.999996, y: 39.999996, z: 39.999996}
+  m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children: []
   m_Father: {fileID: 5710356742963989006}
   m_RootOrder: 4
@@ -302,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 5710356741929048316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.999996, y: 39.999996, z: 39.999996}
+  m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children: []
   m_Father: {fileID: 5710356742963989006}
   m_RootOrder: 1
@@ -377,13 +377,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5710356742963989006}
-  - component: {fileID: 4984548286353590115}
+  - component: {fileID: 6101687155500774047}
   - component: {fileID: 5710356742963989008}
   - component: {fileID: 5710356742963989007}
   - component: {fileID: 4663177369819831399}
   - component: {fileID: 3128193666962417430}
   m_Layer: 0
-  m_Name: Rabbit_Normal
+  m_Name: Rabbit_Baby
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 5710356742963989011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8253280764414298362}
   - {fileID: 5710356741929048314}
@@ -408,7 +408,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4984548286353590115
+--- !u!114 &6101687155500774047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5710356742963989011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 700938fa6de66bc4e9ac85634b599968, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e9ae05b6078fca4cb1685e5318f1407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5710356742963989008}
@@ -456,10 +456,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.21000636
-  m_Height: 0.7151161
+  m_Radius: 0.2549544
+  m_Height: 0.756834
   m_Direction: 2
-  m_Center: {x: -0.00035232306, y: 0.28616464, z: 0.05226299}
+  m_Center: {x: -0.0003523131, y: 0.25587776, z: 0.047825996}
 --- !u!54 &4663177369819831399
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ Transform:
   m_GameObject: {fileID: 8253280764414465242}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.999996, y: 39.999992, z: 39.999992}
+  m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children:
   - {fileID: 8253280764414298364}
   m_Father: {fileID: 5710356742963989006}

@@ -8,7 +8,8 @@ public class RabbitUnit : Unit
 
     public override void Initialize()
     {
-        base.Initialize();
+        IsUpdate = true;
+        IsDeath = false;
 
         unitObject = InGameManager.ObjectPooling.Spawn<RabbitUnitObject>(this.unitData.model);
         //unitObject.model.transform.localPosition = Vector3.zero;
@@ -68,5 +69,4 @@ public class RabbitUnit : Unit
 
         ChangeFSMState(StateMachine.State.Death);
     }
-
 }

@@ -21,7 +21,8 @@ public class InGameManager : MonoBehaviour
     public static bool IsReSetting;
 
     private float time;
-    private float rabbitSapwnTime = 3f;
+    private float rabbitSpawnTime = 3f;
+    private float rabbitSpawnRadius = 10f;
     public float gameTime;
 
 
@@ -74,25 +75,7 @@ public class InGameManager : MonoBehaviour
             return;
         }
 
-        if (time >= rabbitSapwnTime)
-        {
-            time -= rabbitSapwnTime;
-
-            RabbitUnit rabbit = new RabbitUnit();
-            rabbit.SetUnitTable(201);
-            rabbit.Initialize();
-
-            Vector3 getPoint = Random.onUnitSphere;
-            getPoint.y = 0.0f;
-
-            float radius = 10f;
-            float r = Random.Range(0.0f, radius);
-            rabbit.unitObject.cachedTransform.position = (getPoint * r) + playerControl.transform.position;
-
-            rabbit.unitObject.cachedTransform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
-
-            unitManager.Regist(rabbit);
-        }
+        SpawnRabbit();
 
         unitManager.OnUpdate(Time.deltaTime);
     }
@@ -102,10 +85,78 @@ public class InGameManager : MonoBehaviour
         unitManager.OnLateUpdate(Time.deltaTime);
     }
 
+    public void SpawnRabbit()
+    {
+        if (time >= rabbitSpawnTime)
+        {
+            time -= rabbitSpawnTime;
+
+            int randomInt = 0;
+            
+            switch (GameManager.Instance.UserInfoData.selectedStage)
+            {
+                //case 1: randomInt = Random.Range(0, 2); break;
+                case 1: randomInt = 1; break;
+                case 2: randomInt = Random.Range(0, 3); break;
+                case 3: randomInt = Random.Range(0, 5); break;
+                default: randomInt = 0; break;
+            }
+
+            RabbitUnit rabbit = null;
+            Vector3 getPoint = Random.onUnitSphere;
+            getPoint.y = 0.0f;
+            switch ((Unit_Type)randomInt)
+            {
+                case Unit_Type.Rabbit_Normal:
+                    rabbit = new RabbitUnit();
+                    rabbit.SetUnitTable(201);
+                    break;
+                case Unit_Type.Rabbit_Baby:
+                    //아기 토끼의 경우 여러마리가 동시 소환 되야 하기 때문에 처리를 다르게 실행
+                    StartCoroutine(BabyRbSpawn(getPoint));
+                    return;
+                case Unit_Type.Rabbit_Strong:
+                    rabbit = new RabbitUnit();
+                    rabbit.SetUnitTable(201);
+                    break;
+                case Unit_Type.Rabbit_Evolve:
+                    rabbit = new RabbitUnit();
+                    rabbit.SetUnitTable(201);
+                    break;
+                case Unit_Type.Rabbit_BulkUp:
+                    rabbit = new RabbitUnit();
+                    rabbit.SetUnitTable(201);
+                    break;
+            }
+            rabbit.Initialize();
+            rabbit.unitObject.cachedTransform.SetPositionAndRotation(
+                (getPoint * rabbitSpawnRadius) + playerControl.transform.position
+                , Quaternion.Euler(0, Random.Range(0, 360f), 0));
+
+            unitManager.Regist(rabbit);
+        }
+    }
+
     public void AddScore(int addScore, bool isCombo = false)
     {
         score += addScore;
         UIManager.Instance.RefreshUserInfo();
         (UIManager.Instance.GetUI(UIState._InGameUI) as IngameUI).AddScoreUI(addScore, isCombo);
+    }
+
+    IEnumerator BabyRbSpawn(Vector3 getPoint)
+    {
+        int babyCount = Random.Range(3, 6);
+        for (int i = 0; i < babyCount; i++)
+        {
+            BabyRbUnit baby = new BabyRbUnit();
+            baby.SetUnitTable(202);
+            baby.Initialize();
+            baby.unitObject.cachedTransform.SetPositionAndRotation(
+                ((getPoint * rabbitSpawnRadius) + Random.onUnitSphere) + playerControl.transform.position
+                , Quaternion.Euler(0, Random.Range(0, 360f), 0));
+            unitManager.Regist(baby);
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

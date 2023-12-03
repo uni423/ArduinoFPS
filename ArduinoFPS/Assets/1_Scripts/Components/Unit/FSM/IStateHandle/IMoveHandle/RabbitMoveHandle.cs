@@ -13,7 +13,16 @@ public class RabbitMoveHandle : StateHandle
     /// </summary>
     public override void OnEnter()
     {
-        cachedTransofrm = parent.unitObject.transform;
+        cachedTransofrm = parent.unitObject.cachedTransform;
+        
+        parent.SetAnimationParam("IsMove", true);
+        int special = Random.Range(0, 20);
+        if (special == 0)
+            parent.SetAnimationParam("MoveType", 1);
+        else if (special == 1)
+            parent.SetAnimationParam("MoveType", 2);
+        else if (special == 2)
+            parent.SetAnimationParam("MoveType", 3);
     }
 
     /// <summary>

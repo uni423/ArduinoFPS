@@ -67158,6 +67158,8 @@ MonoBehaviour:
     objectCount: 1
   - prefab: {fileID: 5710356742963989011, guid: fdea7568c22494e4fba9bdde54468894, type: 3}
     objectCount: 1
+  - prefab: {fileID: 5710356742963989011, guid: ab73c149579019d4fb849df9c3664b7d, type: 3}
+    objectCount: 1
   - prefab: {fileID: 7004847412731397763, guid: 190fc7bb5b0781a44b9ac493ae22bcd8, type: 3}
     objectCount: 1
   - prefab: {fileID: 141433446842962269, guid: dd8a9727981ea7544b55a51f8d2bd6f9, type: 3}
