@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutineMethod(TableBase.LoadAllDataTable());
 
-        //bluetoothManager.Init();
+        bluetoothManager.Init();
 
         Initialize();
 

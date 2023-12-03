@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4362094965388255608}
   - component: {fileID: 6943138948415835370}
   - component: {fileID: 8867614035483308675}
-  - component: {fileID: 8599269042928845337}
+  - component: {fileID: 156947370832153308}
   m_Layer: 0
   m_Name: Spring_Tree_06_LOD0
   m_TagString: Untagged
@@ -138,8 +138,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8599269042928845337
-BoxCollider:
+--- !u!136 &156947370832153308
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,9 +148,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5, y: 5.567499, z: 2.5}
-  m_Center: {x: 0, y: 2.7476234, z: 0}
+  m_Radius: 0.16
+  m_Height: 5.566342
+  m_Direction: 1
+  m_Center: {x: 0.075259805, y: 2.696574, z: 0.09370315}
 --- !u!1 &6686303719186084241
 GameObject:
   m_ObjectHideFlags: 0

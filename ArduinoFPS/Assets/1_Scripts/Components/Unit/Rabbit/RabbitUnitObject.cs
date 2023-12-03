@@ -5,6 +5,9 @@ using UnityEngine;
 public class RabbitUnitObject : UnitObject
 {
     RabbitUnit rabbit;
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip[] spawnSFX;
 
     public override void LoadModel(string path)
     {

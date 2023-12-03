@@ -13,6 +13,12 @@ public class PlayerControl : MonoBehaviour
     public int comboCount;
     public float comboTimeMax;
     public float comboTimeCur;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip[] reloadSFX;
+    public AudioClip[] fireSFX;
+
     #endregion
     #region [이동]
     public float turnSpeed = 4.0f; // 마우스 회전 속도
@@ -113,6 +119,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (bulletCountCur > 0)
         {
+            audioSource.clip = fireSFX[Random.Range(0, fireSFX.Length)];
+            audioSource.Play();
             bulletCountCur--;
             GameObject bullet = InGameManager.ObjectPooling.Spawn("Bullet");
             bullet.transform.SetPositionAndRotation(bulletPoint.position, bulletPoint.rotation);
@@ -124,6 +132,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (bulletCountCur < bulletCountMax)
         {
+            audioSource.clip = reloadSFX[Random.Range(0, reloadSFX.Length)];
+            audioSource.Play();
             bulletCountCur = bulletCountMax;
             UIManager.Instance.RefreshUserInfo();
         }

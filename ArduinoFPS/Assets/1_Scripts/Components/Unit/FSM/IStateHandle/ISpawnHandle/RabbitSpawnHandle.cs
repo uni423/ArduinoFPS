@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class RabbitSpawnHandle : StateHandle
 {
+    RabbitUnitObject unitObject;
     /// <summary>
     /// 
     /// </summary>
     public override void OnEnter()
     {
-
         Debug.LogError("Åä³¢ ½ºÆù");
+        unitObject = parent.unitObject as RabbitUnitObject;
+        unitObject.audioSource.clip = unitObject.spawnSFX[Random.Range(0, unitObject.spawnSFX.Length)];
+        unitObject.audioSource.Play();
     }
     float time = 0;
 
