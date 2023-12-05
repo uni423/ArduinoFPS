@@ -30,6 +30,15 @@ public class StrongRbUnit : RabbitUnit
         RegistHandler();
     }
 
+    public override void RegistHandler()
+    {
+        SetHandle(StateMachine.State.Spawn, StateHandleFactory.Create<RabbitSpawnHandle>());
+        SetHandle(StateMachine.State.Move, StateHandleFactory.Create<StrongRbMoveHandle>());
+        SetHandle(StateMachine.State.Hit, StateHandleFactory.Create<RabbitHitHandle>());
+        SetHandle(StateMachine.State.Death, StateHandleFactory.Create<RabbitDeathHandle>());
+        SetHandle(StateMachine.State.DeSpawn, StateHandleFactory.Create<RabbitDeSpawnHandle>());
+    }
+
     public override void Hit(AttackType type)
     {
         if (IsDeath == true)

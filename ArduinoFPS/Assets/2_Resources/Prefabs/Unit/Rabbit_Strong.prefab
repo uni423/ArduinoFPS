@@ -427,6 +427,7 @@ MonoBehaviour:
   spawnSFX:
   - {fileID: 8300000, guid: 0e1410b5a20a24543bcbde93ecbd2bcb, type: 3}
   - {fileID: 8300000, guid: 42ae82766ed33a642bd0fa63cfe4cdad, type: 3}
+  JumpPower: 5
 --- !u!95 &5710356742963989008
 Animator:
   serializedVersion: 3

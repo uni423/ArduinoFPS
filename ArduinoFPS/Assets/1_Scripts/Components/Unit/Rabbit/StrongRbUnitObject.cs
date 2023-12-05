@@ -5,6 +5,7 @@ using UnityEngine;
 public class StrongRbUnitObject : RabbitUnitObject
 {
     StrongRbUnit rabbit;
+    public int JumpPower;
 
     public override void SetAgent(Unit _unit)
     {

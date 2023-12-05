@@ -115,8 +115,8 @@ public class InGameManager : MonoBehaviour
                     StartCoroutine(BabyRbSpawn(getPoint));
                     return;
                 case Unit_Type.Rabbit_Strong:
-                    rabbit = new RabbitUnit();
-                    rabbit.SetUnitTable(201);
+                    rabbit = new StrongRbUnit();
+                    rabbit.SetUnitTable(203);
                     break;
                 case Unit_Type.Rabbit_Evolve:
                     rabbit = new EvolveRbUnit();
